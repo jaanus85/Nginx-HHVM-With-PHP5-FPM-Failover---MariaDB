@@ -6,6 +6,6 @@ After installer.sh is completed.
 
 Edit /etc/monit//monitrc/hhvm-monit and replace "domain.tld" with your domain.
 
-Edit /etc/nginx/sites-enabled/standard and replace domain.tld for the vhost.
+Edit /etc/nginx/sites-enabled/standard and replace "domain.tld" for the vhost.
 
 Run: sudo apt-get install mariadb-server
