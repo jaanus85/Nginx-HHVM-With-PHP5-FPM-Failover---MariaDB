@@ -79,16 +79,16 @@ echo "= Nginx Config               ="
 echo "=============================="
 echo -e "${COLOR_NONE}"
 sudo rm /etc/nginx/sites-enabled/default
-wget -P /etc/nginx/sites-enabled/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/standard
+wget -P /etc/nginx/sites-enabled/ https://rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/standard
 sudo rm /etc/nginx/fastcgi.conf
-wget -P /etc/nginx/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/fastcgi.conf
+wget -P /etc/nginx/ https://rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/fastcgi.conf
 sudo rm /etc/nginx/hhvm.conf
-wget -P /etc/nginx/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/hhvm.conf
+wget -P /etc/nginx/ https://rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/hhvm.conf
 sudo rm /etc/hhvm/server.ini
-wget -P /etc/hhvm/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/server.ini
+wget -P /etc/hhvm/ https://rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/server.ini
 sudo rm /etc/nginx/nginx.conf
-wget -P /etc/nginx/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/nginx.conf
-wget -P /etc/monit/conf.d/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/hhvm-monit
+wget -P /etc/nginx/ https://rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/nginx.conf
+wget -P /etc/monit/conf.d/ https://rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/hhvm-monit
 sudo sed -i "0,/^worker_processes/ s/^worker_processes .*$/worker_processes `grep -c processor /proc/cpuinfo`;/" /etc/nginx/nginx.conf
 sudo /etc/init.d/hhvm restart
 sudo /etc/init.d/monit restart
