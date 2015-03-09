@@ -89,7 +89,7 @@ sudo rm /etc/hhvm/server.ini
 wget -P /etc/hhvm/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/server.ini
 sudo rm /etc/nginx/nginx.conf
 wget -P /etc/nginx/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/nginx.conf
-wget -P /etc/monit/conf.d/https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/hhvm-monit
+wget -P /etc/monit/conf.d/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/hhvm-monit
 sudo sed -i "0,/^worker_processes/ s/^worker_processes .*$/worker_processes `grep -c processor /proc/cpuinfo`;/" /etc/nginx/nginx.conf
 sudo /etc/init.d/hhvm restart
 sudo /etc/init.d/monit restart
