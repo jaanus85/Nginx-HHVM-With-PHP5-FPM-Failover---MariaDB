@@ -80,7 +80,6 @@ echo "=============================="
 echo -e "${COLOR_NONE}"
 sudo rm /etc/nginx/sites-enabled/default
 wget -P /etc/nginx/sites-enabled/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/standard
-sudo ln -s /etc/nginx/sites-available/standard /etc/nginx/sites-enabled/standard
 sudo rm /etc/nginx/fastcgi.conf
 wget -P /etc/nginx/ https://cdn.rawgit.com/jaanus85/Nginx-HHVM-With-PHP5-FPM-Failover---MariaDB/master/fastcgi.conf
 sudo rm /etc/nginx/hhvm.conf
