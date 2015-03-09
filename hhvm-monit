@@ -1,0 +1,6 @@
+check process hhvm with pidfile /var/run/hhvm/pid
+    start program = "/etc/init.d/hhvm start" with timeout 10 seconds
+    stop program = "/etc/init.d/hhvm stop"
+    if failed host domain.tld port 80 protocol http
+        and request "/index.php"
+    then restart
